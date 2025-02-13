@@ -1,0 +1,118 @@
+/* Body স্টাইল */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffebf0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* কার্ডের স্টাইল */
+.card {
+  background: white;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* "Click the heart" মেসেজের স্টাইল */
+.message {
+  font-size: 18px;
+  color: #0f0408;
+  font-weight: bold;
+}
+
+/* "Click the heart" মেসেজ লুকানো হবে যখন হার্ট ক্লিক হবে */
+.message.hide {
+  display: none;
+}
+
+/* লেখা প্রাথমিকভাবে লুকানো থাকবে */
+.text {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+  overflow: hidden;
+}
+
+/* লেখার মধ্যে স্পেস (gap) যোগ করা */
+
+/* পুরো টেক্সট ব্লকের নিচে অতিরিক্ত গ্যাপ */
+/* টেক্সট ব্লকের জন্য স্পেস (gaps) */
+.text {
+  display: block;
+  margin-bottom: 26px; /* পুরো টেক্সট ব্লকের নিচে গ্যাপ */
+  padding-bottom: 26px; /* টেক্সট ব্লকের ভিতরে গ্যাপ */
+}
+
+/* লেখাগুলোর মধ্যে পৃথক গ্যাপ */
+.text p {
+  margin-bottom: 25px; /* প্রতিটি প্যারাগ্রাফের নিচে গ্যাপ */
+}
+
+/* শেষের প্যারাগ্রাফের জন্য bold স্টাইল */
+.text p:last-child {
+  font-weight: bold;
+}
+
+/* লেখা যখন দেখানো হবে */
+.text.show {
+  max-height: 1000px; /* বড় লেখা দেখানোর জন্য */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* হার্ট কন্টেইনার */
+.heart-container {
+  transition: margin-top 0.5s ease;
+  margin-top: 30px;
+}
+
+/* হার্টের বেসিক স্টাইল */
+.heart {
+  width: 30px;
+  height: 30px;
+  background: red;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+  transition: background 1s ease, margin-top 1s ease;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  transition: background 1s ease;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 15px;
+}
+
+/* হার্ট কালো হওয়ার জন্য */
+.black-heart {
+  background-color: black;
+}
+
+.black-heart::before,
+.black-heart::after {
+  background-color: black;
+}
