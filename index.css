@@ -8,7 +8,10 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
+#dear {
+  font-weight: 700;
+  font-size: 30px;
+}
 /* কার্ডের স্টাইল */
 .card {
   background: white;
@@ -42,6 +45,7 @@ body {
   background-color: black;
   padding-top: 8px;
   padding-bottom: 8px;
+  border-radius: 10px;
 }
 
 /* "Click the heart" মেসেজ লুকানো হবে যখন হার্ট ক্লিক হবে */
