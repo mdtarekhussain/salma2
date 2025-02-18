@@ -30,6 +30,38 @@ body {
   color: #1a080f;
   font-weight: bold;
 }
+.img {
+  width: 100%;
+  height: 270px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.i {
+  color: rgb(51, 194, 16);
+  font-size: 50px;
+}
+.love {
+  color: rgb(7, 116, 7);
+}
+.you {
+  font-size: 50px;
+  color: rgb(163, 15, 114);
+}
+.every {
+  color: rgb(18, 183, 189);
+}
+.u {
+  color: rgb(47, 113, 201);
+}
+.universe {
+  color: rgb(196, 15, 181);
+}
+.text2 {
+  background-color: yellow;
+  font-size: 35px;
+  font-weight: 700;
+  opacity: 10px;
+}
 .koto {
   background-color: rgb(192, 192, 24);
 }
